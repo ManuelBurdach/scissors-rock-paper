@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400;700&display=swap");
+@import "./variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: $red;
+}
+
+body {
+  background-color: $grey;
+  color: $white;
+  font-family: "Edu VIC WA NT Beginner", cursive, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form {
+  width: 100%;
+
+  & fieldset {
+    padding: 20px;
+    border: 2px solid $white;
+    & p:first-child {
+      padding-bottom: 20px;
+    }
+    & label {
+      margin: 5px;
+      & input {
+        margin-right: 3px;
+      }
+    }
+  }
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  font-size: 48px;
+  border: 2px solid $white;
+  position: relative;
+  & p {
+    display: inline-block;
+  }
+  & > p:first-child,
+  > p:last-child {
+    background-color: $red;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 5px;
+  }
+  & > p:first-child {
+    position: absolute;
+    left: -20px;
+  }
+  & > p:last-child {
+    position: absolute;
+    right: -20px;
+  }
+}
+
+.output {
+  font-size: 22px;
+  margin: 0 auto;
+}
+
+.selection {
+  width: 100%;
+  & button {
+    cursor: pointer;
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
+    border: 3px solid $white;
+    color: $white;
+    border-radius: 35px;
+    &:hover {
+      border: 3px solid rgb(105, 105, 105);
+      box-shadow: 0px 0px 15px grey;
+      transition: all 0.05s linear;
+    }
+  }
+}
+
+.makemove {
+  width: 100%;
+  text-transform: uppercase;
+}
+
+a {
+  color: $yellow;
+  margin: 0 auto;
+}
+
+#roundsOutput {
+  font-size: 32px;
+}
+
+.small {
+  font-size: 12px;
+  vertical-align: super;
+}
+
+.red {
+  border: 3px solid $red50 !important;
+  box-shadow: 0px 0px 15px $red1 !important;
+  transition: all 0.2s linear;
+}
+.green {
+  border: 3px solid $green50 !important;
+  box-shadow: 0px 0px 15px $green !important;
+  transition: all 0.2s linear;
+}
+
+.ani {
+  animation: ani 0.2s linear reverse;
+  animation-direction: alternate;
+}
+
+@keyframes ani {
+  0%,
+  100% {
+    position: relative;
+    left: 0px;
+  }
+  25% {
+    left: -25px;
+  }
+  50% {
+    left: 0px;
+  }
+  75% {
+    left: 25px;
+  }
+}
