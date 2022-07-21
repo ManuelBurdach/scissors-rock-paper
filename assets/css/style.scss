@@ -88,6 +88,21 @@ form {
 
 .selection {
   width: 100%;
+  & button:nth-of-type(1) {
+    background: url("../img/button_rock.svg") no-repeat;
+    background-size: 60%;
+    background-position: center;
+  }
+  & button:nth-of-type(2) {
+    background: url("../img/button_paper.svg") no-repeat;
+    background-size: 60%;
+    background-position: center;
+  }
+  & button:nth-of-type(3) {
+    background: url("../img/button_scissors.svg") no-repeat;
+    background-size: 60%;
+    background-position: center;
+  }
   & button {
     cursor: pointer;
     margin: 10px;
@@ -129,6 +144,13 @@ a {
   box-shadow: 0px 0px 15px $red1 !important;
   transition: all 0.2s linear;
 }
+
+.orange {
+  border: 3px solid $orange50 !important;
+  box-shadow: 0px 0px 15px $orange !important;
+  transition: all 0.2s linear;
+}
+
 .green {
   border: 3px solid $green50 !important;
   box-shadow: 0px 0px 15px $green !important;
